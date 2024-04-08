@@ -1,0 +1,131 @@
+section form {
+    margin: 2vh 20vw;
+}
+
+form fieldset {
+    border: 1px solid var(--nav-menu-color);
+    border-radius: 10px;
+    box-shadow: 3px 2px 2px grey;
+    margin: 1vh 0;
+    height: fit-content;
+}
+
+form fieldset fieldset {
+    border-style: none;
+    box-shadow: none;
+}
+
+form fieldset input, label {
+    display: block;
+}
+
+.validinput {
+    background-color: green;
+}
+
+label {
+    margin: 1vh 0;
+}
+
+input, select {
+    width: 100%;
+    display: block;
+    margin: 1vh 0;
+}
+
+button {
+    width: 100%;
+    background-color: #0090e3;
+    border-radius: 28px;
+    border: 1px solid #0090e3;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 17px;
+    padding: 16px 31px;
+    text-decoration: none;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--nav_item-hover-color);
+    border: 1px solid var(--nav_item-hover-color);
+}
+
+select {
+    width: 100%;
+}
+
+label.checkbox, input[type="radio"] {
+    width: fit-content;
+    display: inline-block;
+}
+
+fieldset fieldset.adresform {
+    padding: 0;
+}
+
+fieldset.personalisering, fieldset.adres {
+    padding: 0;
+}
+
+fieldset.type_personalisering {
+    margin: 5px 0;
+    padding: 0;
+}
+
+fieldset .adres {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+            "straat straat nummer"
+            "plaats postcode land";
+}
+
+fieldset section.adres section {
+    padding: 0 0.5vh 0 0;
+}
+
+fieldset.adres section.straat {
+    grid-area: straat;
+}
+
+fieldset.adres section.nummer {
+    grid-area: nummer;
+}
+
+fieldset.adres input#plaats label[for="plaats"] {
+    grid-area: plaats;
+}
+
+fieldset.adres input#postcode label[for="postcode"] {
+    grid-area: postcode;
+}
+
+fieldset.adres input#land label[for="land"] {
+    grid-area: land;
+}
+
+form fieldset.product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+form fieldset.product input,label {
+    display: inline;
+}
+
+fieldset.personalisering input[type="color"] {
+    width: 20%
+}
+
+fieldset.personalisering {
+    display: grid;
+    width: 100%;
+}
+
+#error_email, #error_naam, #error {
+    margin: 8px 0;
+    color: red;
+}

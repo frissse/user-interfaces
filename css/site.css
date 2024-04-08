@@ -1,0 +1,152 @@
+/* Algemeen */
+/* lijnt de body van de pagina centraal uit */
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* zet alle margin en padding op nul voro een egale styling over de volledige website */
+
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: OpenSans, serif;
+}
+
+aside {
+    width: 80%;
+    margin: 10px auto;
+}
+
+/* typografie */
+@font-face {
+    font-family: OpenSans;
+    src: url("../media/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* variabelen */
+
+:root {
+    --nav-menu-color: #0090E3;
+    --nav-item-color: #FFFFFF;
+    --nav_item-hover-color: #FF6601;
+}
+
+p {
+    font-family: OpenSans, serif;
+}
+
+/* verborgen title */
+
+.verborgenTitel {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: -10000px;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* body */
+
+a {
+    text-decoration: none;
+}
+
+/* header -> menu -> nav */
+header {
+    grid-area: header;
+    padding: 0 20px 0 0;
+    background-color: var(--nav-menu-color);
+}
+
+nav {
+    height: 100%;
+}
+
+/* verspreid het logo en het menu over de volledige breedte van de pagina met een duidelijke spatie tussen beide */
+
+.navHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navList {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navItem {
+    height: 100%;
+    margin: 0 10px 0 10px;
+}
+
+.navItemSelected {
+    height: 100%;
+    background-color: var(--nav_item-hover-color);
+}
+
+.navItemSelected a:hover {
+    color: var(--nav-item-color)
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    color: var(--nav-item-color);
+}
+
+nav a:hover {
+    color: var(--nav_item-hover-color);
+}
+
+.navSubmenuBtn:hover {
+    color: var(--nav_item-hover-color);
+}
+
+/* set de positie van dropdown menu relatief aan de locatie op de pagina van de button die de dropdown menu opent */
+.navSubmenu {
+    display: flex;
+    flex-flow: column wrap;
+    position: absolute;
+    top: 62px;
+    min-width: fit-content;
+    background-color: var(--nav-menu-color);
+}
+
+.navItem:hover .navSubmenu li {
+    display: block;
+}
+
+.navSubmenu li {
+    display: none;
+    width: 100%;
+    min-width: fit-content;
+    font-size: 1em;
+    margin: 0.5vh -0.3vw;
+    padding: 0 0.4vw;
+}
+
+/* footer */
+footer {
+    grid-area: footer;
+}
+
+footer p {
+    text-align: center;
+    margin: 2vh 2vh;
+
+}
+

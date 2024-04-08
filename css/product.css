@@ -1,0 +1,140 @@
+/* uitlijning van de filter naast de producten pagina */
+
+.productMain {
+    margin: 2vh 2vw;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-area: product;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+}
+
+/* main */
+
+article {
+    margin: 2vw;
+}
+
+article h2 {
+    margin: 2rem;
+}
+
+/* een sectie per product categorie die duidelijk visueel wordt afgebakend met een oranje rand */
+
+.productSection {
+    margin: 2vh 2vw;
+    padding: 1rem;
+    border: var(--nav_item-hover-color) 2px solid;
+    border-radius: 10px;
+}
+
+.productSection h3 {
+    margin: 2vh 1.5vw;
+}
+
+.productItem {
+    margin: 0 1vw;
+}
+
+.productItem p {
+    margin: 2vh;
+}
+
+/* grid voor de producten pagina in kolommen van 4*/
+
+.productGrid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px 20px;
+    list-style: none;
+}
+
+/* filter */
+
+.productFilterMenu {
+    grid-area: sidebar;
+}
+
+.productFilterMenu section {
+    margin: 1vh 0;
+}
+
+.productFilterMenu section p {
+    font-size: 18px;
+    margin: 2vh 0 0 0;
+    text-decoration: underline var(--nav_item-hover-color) solid 2px;
+}
+
+.productFilterMenu section ol li {
+    margin: 0.5vh 0;
+}
+
+.productFilterMenu section ul li {
+    margin: 0.5vh 0;
+}
+
+input#alle_prijzen:checked ~ section section section section ul ul li label[for="alle_prijzen"],
+input#goedkoop:checked ~ section section section section ul ul li label[for='goedkoop'],
+input#middel:checked ~ section section section section ul ul li label[for='middel'],
+input#duur:checked ~ section section section section ul ul li label[for='duur'] {
+    text-decoration: underline var(--nav-menu-color) solid 2px;
+}
+
+input#alle_kleuren:checked ~ section section section section ul ul li label[for="alle_kleuren"],
+input#zwart:checked ~ section section section section ul ul li label[for="zwart"],
+input#grijs:checked ~ section section section section ul ul li label[for="grijs"],
+input#rood:checked ~ section section section section ul ul li label[for="rood"],
+input#paars:checked ~ section section section section ul ul li label[for="paars"],
+input#groen:checked ~ section section section section ul ul li label[for="groen"]
+{
+    text-decoration: underline var(--nav-menu-color) solid 2px;
+}
+
+input#alle_soorten:checked ~ section section section section ul ul li label[for="alle_soorten"],
+input#streling:checked ~ section section section section ul ul li label[for="streling"],
+input#handig:checked ~ section section section section ul ul li label[for="handig"],
+input#unbreakable:checked ~ section section section section ul ul li label[for="unbreakable"]
+{
+    text-decoration: underline var(--nav-menu-color) solid 2px;
+}
+
+.productFilterMenu label:hover {
+    color: var(--nav_item-hover-color);
+}
+
+main ol,ul li {
+    list-style: none;
+}
+
+.productRight section li {
+    display: none;
+}
+
+input#alle_prijzen:checked ~ section section.productRight section.productSection ul.productGrid li.alle_prijzen,
+input#goedkoop:checked ~ section section.productRight section.productSection ul.productGrid li.goedkoop,
+input#middel:checked ~ section section.productRight section.productSection ul.productGrid li.middel,
+input#duur:checked ~ section section.productRight section.productSection ul.productGrid li.duur
+{
+    display: inline;
+}
+
+input#alle_kleuren:checked ~ section section.productRight section.productSection ul.productGrid li.alle_kleuren,
+input#zwart:checked ~ section section.productRight section.productSection ul.productGrid li.zwart,
+input#grijs:checked ~ section section.productRight section.productSection ul.productGrid li.grijs,
+input#rood:checked ~ section section.productRight section.productSection ul.productGrid li.rood,
+input#paars:checked ~ section section.productRight section.productSection ul.productGrid li.paars,
+input#groen:checked ~ section section.productRight section.productSection ul.productGrid li.groen
+{
+    display: inline;
+}
+
+input#alle_soorten:checked ~ section section.productRight section.productSection ul.productGrid li.alle_soorten,
+input#streling:checked ~ section section.productRight section.productSection ul.productGrid li.streling,
+input#handig:checked ~ section section.productRight section.productSection ul.productGrid li.handig,
+input#unbreakable:checked ~ section section.productRight section.productSection ul.productGrid li.unbreakable
+{
+    display: inline;
+}

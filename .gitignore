@@ -1,0 +1,15 @@
+# IDEs
+.idea/
+.vscode/
+
+# auto-validator
+auto-validation*/
+auto-validation.bat
+auto-validation.sh
+readme.md
+
+# MacOS
+.DS_Store/
+
+.drawio
+.drawio.bkp

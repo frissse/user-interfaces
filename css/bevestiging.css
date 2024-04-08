@@ -1,0 +1,84 @@
+h3 {
+    color: var(--nav_item-hover-color);
+    text-align: center;
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+h4 {
+    text-decoration: underline;
+    margin: 10px 0;
+}
+
+table {
+    width: 100%;
+}
+
+table td {
+    padding-bottom: 5px;
+}
+
+#bevestiging{
+    margin: 2vh 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.5fr 2fr;
+    grid-template-areas:
+            "bevestiging bevestiging bevestiging"
+            "persoonlijk product personalisering"
+}
+
+#bevestiging section {
+    margin: 2vh 1vh;
+    padding: 2vh;
+    border: 1px solid var(--nav-menu-color);
+    border-radius: 10px;
+}
+
+#bevestiging section h2 {
+    text-align: center;
+    color: var(--nav_item-hover-color)
+}
+
+#bevestiging section h3 {
+    margin: 5px 0;
+}
+
+#bevestiging .overzicht {
+    height: min-content;
+}
+
+.overzicht {
+    grid-area: bevestiging;
+}
+
+.gegevens {
+    grid-area: persoonlijk
+}
+
+.product {
+    grid-area: product;
+}
+
+.personalisering {
+    grid-area: personalisering;
+}
+
+.product img {
+    height: fit-content;
+    width: auto;
+    margin: 20px 80px;
+}
+
+table#product td:first-child {
+    width: 50%;
+}
+
+table#specificaties td:first-child {
+    width: 50%;
+    padding-right: 10px;
+}
+
+
+
+

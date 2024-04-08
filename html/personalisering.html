@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/form_validation.js" defer></script>
+    <script src="../js/dyn_data.js" defer></script>
+    <script src="../js/dyn_form.js" defer></script>
+    <link href="../css/normalize.css" rel="stylesheet">
+    <link href="../css/site.css" rel="stylesheet">
+    <link href="../css/personalisering.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="navHeader">
+        <img class="logo" src="../media/logo-je-eigen-hoesje-100x100.jpeg" alt="logo-eigen-hoesje">
+        <h1 class="verborgenTitel">Je Eigen Hoesje</h1>
+        <nav>
+            <h2 class="verborgenTitel">Menu</h2>
+            <ul class="navList">
+                <li class="navItem navItemSelected"><a href="../index.html">Home</a></li>
+                <li class="navItem"><a href="../html/product.html">Product</a></li>
+                <li class="navItem"><a href="../html/personalisering.html">Personaliseer</a></li>
+                <li class="navItem"><a href="../html/faq.html">FAQ</a></li>
+                <li class="navItem"><a href="../html/contact.html">Contact</a>
+                    <ul class="navSubmenu">
+                        <li><a href="https://www.facebook.com">Facebook</a></li>
+                        <li><a href="https://www.instagram.com">Instagram</a></li>
+                        <li><a href="https://www.twitter.com">Twitter</a>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <section>
+        <h2 class="verborgenTitel">personalisering formulier</h2>
+        <form id="personalisering" action="bevestiging.html" method="get">
+
+            <fieldset>
+                <legend>Je persoonlijke gegevens</legend>
+
+                <label for="naam">Naam</label>
+                <input id="naam" name="name" type="text" minlength="3">
+                <p id="error_naam"></p>
+                <label for="email">Email*</label>
+                <input id="email" name="email" type="email" required>
+                <p id="error_email"></p>
+                <label for="telefoon">Telefoon</label>
+                <input id="telefoon" name="phone" type="tel" pattern="^0?[1-9][0-9]{7,8}$">
+                <fieldset class="adresform">
+                    <section class="adres">
+                        <h3 class="verborgenTitel">adres input</h3>
+                        <section class="straat">
+                            <h4 class="verborgenTitel">straat input</h4>
+                            <label for="straat">Straat</label>
+                            <input id="straat" name="straat" type="text">
+                        </section>
+                        <section class="nummer">
+                            <h4 class="verborgenTitel">nummer input</h4>
+                            <label for="nummer">Number</label>
+                            <input id="nummer" type="number" name="number">
+                        </section>
+                        <section class="plaats">
+                            <h4 class="verborgenTitel">plaats input</h4>
+                            <label for="plaats">Plaats</label>
+                            <input id="plaats" type="text" name="plaats">
+                        </section>
+                        <section class="postcode">
+                            <h4 class="verborgenTitel">postcode input</h4>
+                            <label for="postcode">Postcode</label>
+                            <input id="postcode" type="number" name="postcode">
+                        </section>
+                        <section>
+                            <h4 class="verborgenTitel">land input</h4>
+                            <label for="land">Land</label>
+                            <input id="land" type="text" name="land">
+                        </section>
+                    </section>
+                </fieldset>
+                <p>* required</p>
+            </fieldset>
+
+            <fieldset class="product">
+                <legend>Je product</legend>
+                <section>
+                    <h3 class="verborgenTitel">product sectie personalsiering</h3>
+                    <label for="product">Kies je product</label>
+                    <select id="product" name="product">
+                        <option>Selecteer je product</option>
+
+                    </select>
+                </section>
+
+                <section>
+                    <h3 class="verborgenTitel">hoeveelheid product te personaliseren</h3>
+                    <label for="quantity">Hoeveelheid:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="5">
+                </section>
+
+            </fieldset>
+            <fieldset>
+                <legend>Je personalisering</legend>
+                <label>Type personalisering</label>
+                <fieldset class="type_personalisering">
+                    <input type="radio" id="kleur" name="type" value="kleur">
+                    <label class="checkbox" for="kleur">Kleur</label>
+
+                    <input type="radio" id="engraving" name="type" value="engravering">
+                    <label class="checkbox" for="engraving">Engraving</label>
+
+                    <input type="radio" id="foto" name="type" value="foto">
+                    <label class="checkbox" for="foto">Foto</label>
+                </fieldset>
+                <fieldset class="personalisering">
+                    <label for="color">Selecteer de kleur die je wilt</label>
+                    <input type="color" name="color" id="color">
+                    <label for="foto_upload">Selecteer de foto dat je wilt</label>
+                    <input type="file" name="foto_upload" id="foto_upload">
+                    <label for="engraving_input">Welke tekst wil je engraveren?</label>
+                    <input type="text" id="engraving_input" name="engraving_input" maxlength="256">
+                    <label for="engraving_locatie">Waar op het product wil je engraveren?</label>
+                    <input type="text" id="engraving_locatie" name="engraving_locatie" maxlength="256">
+                </fieldset>
+                <p id="error" ></p>
+            </fieldset>
+
+            <input type="submit" name="send" id="send" value="Submit">
+
+        </form>
+    </section>
+</main>
+</body>
+</html>

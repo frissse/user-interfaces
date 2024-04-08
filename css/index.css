@@ -1,0 +1,83 @@
+/* main */
+
+main article {
+    margin: 2vh 2vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr 1fr min-content 1fr;
+    grid-template-areas:
+            "sloganImage zowerkthet"
+            "sloganImage zowerkthet"
+            "wiezijnwij reviews"
+            "historie reviews"
+            ;
+}
+
+main section {
+    margin: 2.5vh 1.5vw;
+}
+main h1,h2,h3,h4 {
+    margin: 2vh 0;
+}
+main h2 {
+    text-align: center;
+}
+
+main h3 {
+    text-align: left;
+}
+
+main img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+main p {
+    margin: 1vh 0;
+}
+
+h4 {
+    margin: 10px -20px;
+}
+
+.sloganImage {
+    grid-area: sloganImage;
+}
+
+.zowerkthet {
+    grid-area: zowerkthet;
+}
+
+.historie {
+    grid-area: historie;
+}
+
+.wiezijnwij {
+    grid-area: wiezijnwij;
+}
+
+/* reviews */
+/* maakt van de reviews een grid van 2x2 */
+
+.reviews {
+    grid-area: reviews;
+}
+
+.reviewGridContainer {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 0 2vw;
+}
+
+.reviewGridChild {
+    margin: 0 2vw;
+}
+
+.reviewGridChild h4 {
+    font-weight: bold;
+    margin: 1vh 0;
+}
